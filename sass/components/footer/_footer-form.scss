@@ -1,0 +1,89 @@
+.footer-form {
+  display: flex;
+  justify-content: space-between;
+  width: 570px;
+  margin-left: 93px;
+}
+
+.footer-form__box {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-form__input {
+  padding: 15px 16px;
+
+  width: 358px;
+  height: 50px;
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  transition-property: outline-color;
+  transition-duration: $time-hover;
+  transition-timing-function: $time-function;
+
+  &:focus {
+      outline: 1px solid $accent-color;
+    }
+
+   &::placeholder {
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+      color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+.footer-form__label {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $second-text-color;
+}
+
+.footer-button {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.footer-button__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+
+  background-color: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: $second-text-color;
+}
+
+.footer-button__icon {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+
+
+
+

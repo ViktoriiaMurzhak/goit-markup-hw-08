@@ -1,0 +1,16 @@
+// тут пишемо шаблони, скидування загальних стилів для, коли додаєм клас (list наприклад), а підключаємо його через @extend %list. Cам клас також пишемо через %
+
+%list {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  list-style: none;
+}
+
+
+

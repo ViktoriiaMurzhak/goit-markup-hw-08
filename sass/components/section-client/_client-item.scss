@@ -1,0 +1,34 @@
+.clients__link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+
+  transition-property: border-color;
+  transition-duration: $time-hover;
+  transition-timing-function: $time-function;
+
+  &:hover .clients__icon,
+  &:focus .clients__icon {
+  fill: $accent-color;
+    }
+
+  &:hover,
+  &:focus {
+  border: 1px solid $accent-color;
+  }
+}
+
+.clients__icon {
+  width: 106px;
+  height: 60px;
+  fill: #afb1b8;
+
+  transition-property: fill;
+  transition-duration:
+  $time-hover;
+  transition-timing-function: $time-function;
+}

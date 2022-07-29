@@ -1,0 +1,49 @@
+.contact {
+  @extend %list;
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+}
+
+.contact__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $text-color;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition-property: color;
+  transition-duration: $time-hover;
+  transition-timing-function: $time-function;
+
+  &:hover,
+  &:focus,
+  &:hover .contact__icon,
+  &:focus .contact__icon {
+    color: $accent-color;
+    fill: $accent-color;
+  }
+}
+
+.contact__icon {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: rgba(117, 117, 117, 1);
+
+  transition-property: fill;
+  transition-duration: $time-hover;
+  transition-timing-function: $time-function;
+}

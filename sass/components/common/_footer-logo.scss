@@ -1,0 +1,15 @@
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+
+  color: #fff;
+  transition-property: color;
+  transition-duration: $time-hover;
+  transition-timing-function: $time-function;
+  
+}
+
+ .footer-logo__span {
+  color: $accent-color;
+ }
+

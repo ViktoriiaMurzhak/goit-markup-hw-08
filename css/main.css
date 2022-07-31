@@ -647,7 +647,7 @@ img {
 .contact {
   display: flex;
   flex-direction: column-reverse;
-  align-items: start;
+  align-items: center;
   gap: 32px;
   margin-bottom: 64px;
 }
@@ -677,7 +677,11 @@ img {
 
 .contact__link {
   display: flex;
+  align-items: center;
   color: #757575;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact__link:hover, .contact__link:focus,
@@ -735,6 +739,7 @@ img {
 @media screen and (min-width: 768px) {
   .contact__icon {
     display: flex;
+    align-items: center;
   }
 }
 

@@ -2,7 +2,7 @@
   @extend %list;
   display: flex;
   flex-direction:column-reverse;
-  align-items: start;
+  align-items: center;
   gap: 32px;
   // margin-left: 96px;
   margin-bottom: 64px;
@@ -32,7 +32,7 @@
 
 .contact__link {
   display: flex;
-  // align-items: center;
+  align-items: center;
   // padding-top: 5px;
   // padding-bottom: 5px;
   color: $text-color;
@@ -40,9 +40,9 @@
   // font-style: normal;
  
 
-  // transition-property: color;
-  // transition-duration: $time-hover;
-  // transition-timing-function: $time-function;
+  transition-property: color;
+  transition-duration: $time-hover;
+  transition-timing-function: $time-function;
 
   &:hover,
   &:focus,
@@ -96,6 +96,7 @@ font-weight: 500;
 
   @media screen and (min-width:$tablet){
    display: flex; 
+   align-items: center;
   }
 }
 

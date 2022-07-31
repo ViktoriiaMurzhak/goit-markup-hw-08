@@ -1,13 +1,20 @@
 .backdrop {
   position: fixed;
+  display: flex;
+  justify-content: center;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
+  padding: 15px;
   background-color: rgba(0, 0, 0, 0.2);
 
   opacity: 1;
   transition: opacity $time-hover $time-function;
+  overflow-y: scroll;
+  z-index: 10;
+
+
 }
 
 .is-hidden {

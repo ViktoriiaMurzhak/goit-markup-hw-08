@@ -1,9 +1,6 @@
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 581px;
-  width: 528px;
+  width: 100% - 6.66%;
+  height: 609px;
 
   display: flex;
   justify-content: center;
@@ -15,8 +12,20 @@
   border-radius: 4px;
   z-index: 10;
 
-  transform: translate(-50%, -50%) scale(1);
+  transform: scale(1);
   transition: $time-hover $time-function;
+
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .modal__button {
@@ -36,8 +45,8 @@
   border-radius: 50%;
 
   &:hover .modal__icon {
-      fill: $accent-color;
-    }
+    fill: $accent-color;
+  }
 }
 
 .modal__icon {
@@ -49,4 +58,3 @@
   transition-duration: $time-hover;
   transition-timing-function: $time-function;
 }
-

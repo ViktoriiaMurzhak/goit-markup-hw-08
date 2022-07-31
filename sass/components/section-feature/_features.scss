@@ -1,11 +1,16 @@
 .feature {
   padding-left: 0;
   padding-right: 0;
-  background-color: var(--bg-color-wite);
+  background-color:$priority-bg-color;
 }
 
 .feature__list {
   @extend %list;
-  display: flex;
-  gap: 30px;
+  
+  @media screen and (min-width:$tablet){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
 }

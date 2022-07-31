@@ -1,15 +1,24 @@
 .footer__logo {
   display: block;
   margin-bottom: 20px;
+  text-align: center;
 
+  font-size: 24px;
   color: #fff;
   transition-property: color;
   transition-duration: $time-hover;
   transition-timing-function: $time-function;
   
+
+  @media screen and (min-width:$desktop) {
+      font-size: 26px;
+    }
+
+  @media screen and (min-width:$desktop) {
+           text-align: start;
+  }
 }
 
  .footer-logo__span {
   color: $accent-color;
  }
-

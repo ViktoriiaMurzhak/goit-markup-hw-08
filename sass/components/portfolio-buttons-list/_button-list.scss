@@ -1,9 +1,19 @@
 .buttons-list {
   @extend %list;
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 50px;
-  justify-content: center;
-  gap: 8px;
+  row-gap: 15px;
+  column-gap: 8px;
+
+  @media screen and (min-width:$tablet){
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+    @media screen and (min-width:$desktop) {
+    }
+  
 }
 
 .buttons-list__button {
@@ -18,6 +28,7 @@
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+  color: $priority-title-color;
 
   transition-property: background-color, color;
   transition-duration: $time-hover;
@@ -29,6 +40,5 @@
       0px 2px 2px rgba(0, 0, 0, 0.12);
     color: $second-text-color;
   }
-
 }
 

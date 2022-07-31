@@ -5,6 +5,13 @@
 }
 
 .footer-box {
-  display: flex;
+
+  @media screen and (min-width:$tablet){
+   display: flex;
+   flex-wrap: wrap;
   align-items: baseline;
+  justify-content: space-around; 
+  }
+
+
 }

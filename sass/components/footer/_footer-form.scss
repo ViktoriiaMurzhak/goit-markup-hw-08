@@ -1,8 +1,12 @@
 .footer-form {
+  text-align: center;
+
+@media screen and (min-width:$desktop) {
   display: flex;
-  justify-content: space-between;
-  width: 570px;
-  margin-left: 93px;
+    justify-content: space-between;
+    width: 570px;
+    margin-left: 93px;
+  }
 }
 
 .footer-form__box {
@@ -13,8 +17,18 @@
 .footer-form__input {
   padding: 15px 16px;
 
-  width: 358px;
+  width: 100%;
   height: 50px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width:$tablet){
+    width: 450px;
+  }
+
+  @media screen and (min-width:$desktop) {
+   width: 358px;
+   margin-bottom: 0;
+        }
 
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -50,6 +64,10 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $second-text-color;
+
+  @media screen and (min-width:$desktop) {
+  text-align: start;
+    }
 }
 
 .footer-button {

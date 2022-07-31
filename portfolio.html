@@ -15,27 +15,44 @@
   <!-- Шапка сторінки з логотипом (верхній блок)-->
   <header class="header">
     <div class="container header__box">
-      <nav class="header__nav">
-        <a class="logo header__logo" href="./index.html"><span class="logo__span">Web</span>Studio</a>
-        <!-- Навігація на інші сторінки -->
-        <ul class="site-nav list">
-          <li class="site-nav__item"><a class="site-nav__link " href="./index.html">Студия</a></li>
+    <a class="logo header__logo" href="./index.html"><span class="logo__span">Web</span>Studio</a>
+
+        <button data-menu-button class="menu-button" type="button" aria-expanded="false" aria-controls="header-menu">
+        <svg class="menu-button__icon" aria-label="Переключатель мобильного меню">
+          <use class="menu-open" href="./images/icons/symbol-defs.svg#icon-menu-button-open"></use>
+          <use class="menu-close" href="./images/icons/symbol-defs.svg#icon-menu-button-close"></use>
+        </svg>
+      </button>
+
+    <div data-menu class="menu-container" id="menu-container">
+    <nav class="header__nav">
+      <!-- Навігація на інші сторінки -->
+        <ul class="site-nav">
+          <li class="site-nav__item"><a class="site-nav__link" href="./index.html">Студия</a></li>
           <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="./portfolio.html">Портфолио</a></li>
           <li class="site-nav__item"><a class="site-nav__link " href="">Контакты</a></li>
         </ul>
-      </nav>
-      <ul class="contact list">
+        </nav>
+    <ul class="contact">
         <li class="contact__item">
-          <a class="contact__link" href="mailto:info@devstudio.com"><svg class="contact__icon">
-              <use href="./images/icons/symbol-defs.svg#icon-envelope"></use>
-            </svg>info@devstudio.com</a>
+          <a class="contact__link header-link-mail" href="mailto:info@devstudio.com"><svg class="contact__icon header-mail">
+            <use href="./images/icons/symbol-defs.svg#icon-envelope"></use>
+          </svg>info@devstudio.com</a>
         </li>
         <li class="contact__item">
-          <a class="contact__link" href="tel:+380961111111"><svg class="contact__icon">
-              <use href="./images/icons/symbol-defs.svg#icon-smartphone"></use>
-            </svg>+38 096 111 11 11</a>
+          <a class="contact__link header-link-tel" href="tel:+380961111111"><svg class="contact__icon header-tel">
+            <use href="./images/icons/symbol-defs.svg#icon-smartphone"></use>
+          </svg>+38 096 111 11 11</a>
         </li>
-      </ul>
+    </ul>
+
+  <ul class="header-socials">
+    <li class="header-socials__item"><a class="header-socials__link"  href="">Instagram</a></li>
+    <li class="header-socials__item"><a class="header-socials__link"  href="">Twitter</a></li>
+    <li class="header-socials__item"><a class="header-socials__link"  href="">Facebook</a></li>
+    <li class="header-socials__item"><a class="header-socials__link"  href="">LinkedIn</a></li>
+  </ul>
+    </div> 
     </div>
   </header>
   <!-- Унікальний контент -->
@@ -56,21 +73,29 @@
 
   <ul class="portfolio-card list">
     <li class="portfolio-card__item"><a href=""><div class="portfolio-card__thumb">
-      <img class="portfolio-card__img" src="./images/portfolio/img.jpg" width="370" alt="Технокряк">
+<picture>
+  <source srcset="./images/adapt/portfolio/imgm1.jpg 1x, ./images/adapt/portfolio/imgm1@2x.jpg 2x" media="(max-width: 767px)">
+   <source srcset="./images/adapt/portfolio/imgd1.jpg 1x, ./images/adapt/portfolio/imgd1@2x.jpg" media="(min-width: 1200px)">
+  <img srcset="./images/adapt/portfolio/imgt1.jpg 1x,./images/adapt/portfolio/imgt1@2x.jpg 2x" src="./images/adapt/portfolio/imgt1.jpg" alt="Пример работ">
+</picture>
       <p class="portfolio-card__overlay">
         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
         получить
         исчерпывающие сведения о компании или частном лице.
       </p>
     </div>
-      <div class="portfolio-card__box">
-        <h2 class="portfolio-card__title" >Технокряк</h2>
+      <div class="portfolio-card__box first-card-box">
+        <h2 class="portfolio-card__title">Технокряк</h2>
       <p class="portfolio-card__text">Веб-сайт</p>
       </div></a>
     </li>
     <li class="portfolio-card__item"><a href="">
       <div class="portfolio-card__thumb">
-      <img class="portfolio-card__img" src="./images/portfolio/img1.jpg" width="370" alt="Постер New Orlean vs Golden Star">
+      <picture>
+  <source srcset="./images/adapt/portfolio/imgm2.jpg 1x, ./images/adapt/portfolio/imgm2@2x.jpg 2x" media="(max-width: 767px)">
+   <source srcset="./images/adapt/portfolio/imgd2.jpg 1x, ./images/adapt/portfolio/imgd2@2x.jpg" media="(min-width: 1200px)">
+  <img srcset="./images/adapt/portfolio/imgt2.jpg 1x,./images/adapt/portfolio/imgt2@2x.jpg 2x" src="./images/adapt/portfolio/imgt2.jpg" alt="Пример работ">
+</picture>
       <p class="portfolio-card__overlay">
         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
         исчерпывающие сведения о компании или частном лице.
@@ -82,7 +107,11 @@
     </div></a>
     </li>
     <li class="portfolio-card__item"><a href=""><div class="portfolio-card__thumb">
-      <img class="portfolio-card__img" src="./images/portfolio/img2.jpg" width="370" alt="Pесторан Seafood">
+    <picture>
+  <source srcset="./images/adapt/portfolio/imgm3.jpg 1x, ./images/adapt/portfolio/imgm3@2x.jpg 2x" media="(max-width: 767px)">
+   <source srcset="./images/adapt/portfolio/imgd3.jpg 1x, ./images/adapt/portfolio/imgd3@2x.jpg" media="(min-width: 1200px)">
+  <img srcset="./images/adapt/portfolio/imgt3.jpg 1x,./images/adapt/portfolio/imgt3@2x.jpg 2x" src="./images/adapt/portfolio/imgt3.jpg" alt="Пример работ">
+</picture>
       <p class="portfolio-card__overlay">
         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
         получить
@@ -95,7 +124,11 @@
     </div></a>
     </li>
     <li class="portfolio-card__item"><a href=""><div class="portfolio-card__thumb">
-      <img class="portfolio-card__img" src="./images/portfolio/img3.jpg" width="370" alt="Проект Prime">
+   <picture>
+  <source srcset="./images/adapt/portfolio/imgm4.jpg 1x, ./images/adapt/portfolio/imgm4@2x.jpg 2x" media="(max-width: 767px)">
+   <source srcset="./images/adapt/portfolio/imgd4.jpg 1x, ./images/adapt/portfolio/imgd4@2x.jpg" media="(min-width: 1200px)">
+  <img srcset="./images/adapt/portfolio/imgt4.jpg 1x,./images/adapt/portfolio/imgt4@2x.jpg 2x" src="./images/adapt/portfolio/imgt4.jpg" alt="Пример работ">
+</picture>
       <p class="portfolio-card__overlay">
         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
         получить
@@ -108,7 +141,11 @@
     </div></a>
     </li>
     <li class="portfolio-card__item"><a href=""><div class="portfolio-card__thumb">
-      <img class="portfolio-card__img" src="./images/portfolio/img4.jpg" width="370" alt="Проект Boxes">
+  <picture>
+  <source srcset="./images/adapt/portfolio/imgm5.jpg 1x, ./images/adapt/portfolio/imgm5@2x.jpg 2x" media="(max-width: 767px)">
+   <source srcset="./images/adapt/portfolio/imgd5.jpg 1x, ./images/adapt/portfolio/imgd5@2x.jpg" media="(min-width: 1200px)">
+  <img srcset="./images/adapt/portfolio/imgt5.jpg 1x,./images/adapt/portfolio/imgt5@2x.jpg 2x" src="./images/adapt/portfolio/imgt5.jpg" alt="Пример работ">
+</picture>
       <p class="portfolio-card__overlay">
         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
         получить
@@ -121,7 +158,11 @@
     </div></a>
     </li>
     <li class="portfolio-card__item"><a href=""><div class="portfolio-card__thumb">
-      <img class="portfolio-card__img" src="./images/portfolio/img5.jpg" width="370" alt="Inspiration has no Borders">
+ <picture>
+  <source srcset="./images/adapt/portfolio/imgm6.jpg 1x, ./images/adapt/portfolio/imgm6@2x.jpg 2x" media="(max-width: 767px)">
+   <source srcset="./images/adapt/portfolio/imgd6.jpg 1x, ./images/adapt/portfolio/imgd6@2x.jpg" media="(min-width: 1200px)">
+  <img srcset="./images/adapt/portfolio/imgt6.jpg 1x,./images/adapt/portfolio/imgt6@2x.jpg 2x" src="./images/adapt/portfolio/imgt6.jpg" alt="Пример работ">
+</picture>
       <p class="portfolio-card__overlay">
         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
         получить
@@ -134,7 +175,11 @@
     </div></a>
     </li>
     <li class="portfolio-card__item"><a href=""><div class="portfolio-card__thumb">
-      <img class="portfolio-card__img" src="./images/portfolio/img6.jpg" width="370" alt="Издание Limited Edition">
+    <picture>
+  <source srcset="./images/adapt/portfolio/imgm7.jpg 1x, ./images/adapt/portfolio/imgm7@2x.jpg 2x" media="(max-width: 767px)">
+   <source srcset="./images/adapt/portfolio/imgd7.jpg 1x, ./images/adapt/portfolio/imgd7@2x.jpg" media="(min-width: 1200px)">
+  <img srcset="./images/adapt/portfolio/imgt7.jpg 1x,./images/adapt/portfolio/imgt7@2x.jpg 2x" src="./images/adapt/portfolio/imgt7.jpg" alt="Пример работ">
+</picture>
       <p class="portfolio-card__overlay">
         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
         получить
@@ -147,7 +192,11 @@
     </div></a>
     </li>
     <li class="portfolio-card__item"><a href=""><div class="portfolio-card__thumb">
-      <img class="portfolio-card__img" src="./images/portfolio/img7.jpg" width="370" alt="Проект LAB">
+     <picture>
+  <source srcset="./images/adapt/portfolio/imgm8.jpg 1x, ./images/adapt/portfolio/imgm8@2x.jpg 2x" media="(max-width: 767px)">
+   <source srcset="./images/adapt/portfolio/imgd8.jpg 1x, ./images/adapt/portfolio/imgd8@2x.jpg" media="(min-width: 1200px)">
+  <img srcset="./images/adapt/portfolio/imgt8.jpg 1x,./images/adapt/portfolio/imgt8@2x.jpg 2x" src="./images/adapt/portfolio/imgt8.jpg" alt="Пример работ">
+</picture>
       <p class="portfolio-card__overlay">
         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
         получить
@@ -160,7 +209,11 @@
     </div></a>
     </li>
     <li class="portfolio-card__item"><a href=""><div class="portfolio-card__thumb">
-      <img class="portfolio-card__img" src="./images/portfolio/img8.jpg" width="370" alt="Growing Business">
+    <picture>
+  <source srcset="./images/adapt/portfolio/imgm9.jpg 1x, ./images/adapt/portfolio/imgm9@2x.jpg 2x" media="(max-width: 767px)">
+   <source srcset="./images/adapt/portfolio/imgd9.jpg 1x, ./images/adapt/portfolio/imgd9@2x.jpg" media="(min-width: 1200px)">
+  <img srcset="./images/adapt/portfolio/imgt9.jpg 1x,./images/adapt/portfolio/imgt9@2x.jpg 2x" src="./images/adapt/portfolio/imgt9.jpg" alt="Пример работ">
+</picture>
       <p class="portfolio-card__overlay">
         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
         получить
@@ -177,7 +230,7 @@
   </section>
 
 </main>
-  <footer class="footer">
+<footer class="footer">
     <div class="container footer-box">
       <div class="adress">
         <!-- Копірайт -->
@@ -197,7 +250,7 @@
   
       <div class="footer-social">
         <p class="footer-social__label">Присоединяйтесь</p>
-        <ul class="footer-social__list list">
+        <ul class="footer-social__list">
           <li class="footer-social__item">
             <a href="" class="footer-social__link">
               <svg class="footer-social__icon">
@@ -243,5 +296,6 @@
       </form>
     </div>
   </footer>
+  <script src="./js/menu.js"></script>
 </body>
 </html>

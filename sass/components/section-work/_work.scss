@@ -1,9 +1,20 @@
+
+
 .work {
   background-color:$priority-bg-color;
   padding-top: 0;
+  
+@media screen and (max-width:1199px) {
+  display: none; 
+}
+ @media screen and (min-width: $desktop){
+  display: flex;
+ }
+
 }
 
 .work__list {
+  @extend %list;
   position: relative;
   display: flex;
   gap: 30px;

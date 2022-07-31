@@ -1,5 +1,9 @@
 .footer-social {
-  margin-left: 70px;
+text-align: center;
+
+  @media screen and (min-width:$desktop) {
+   margin-left: 70px;
+    }
 }
 
 .footer-social__label {
@@ -11,12 +15,18 @@
   text-transform: uppercase;
 
   color: $second-text-color;
+
+  @media screen and (min-width:$desktop) {
+      text-align: start;
+    }
 }
 
 .footer-social__list {
   @extend %list;
   display: flex;
+  justify-content: center;
   gap: 10px;
+  margin-bottom: 60px;
 }
 
 .footer-social__link {

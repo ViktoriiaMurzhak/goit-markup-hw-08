@@ -1,32 +1,48 @@
 .contact {
   @extend %list;
   display: flex;
-  justify-content: end;
-  gap: 30px;
-}
+  flex-direction:column-reverse;
+  align-items: start;
+  gap: 32px;
+  // margin-left: 96px;
+  margin-bottom: 64px;
+
+  @media screen and (min-width:$tablet){
+    flex-direction: column;
+    margin-bottom: 0;
+    gap: 10px;
+    margin-left: 96px;
+  }
+ @media screen and (min-width:$desktop) {
+   flex-direction: row;
+   justify-content: center;
+   margin-bottom: 0;
+  margin-left: 315px;
+   gap: 30px;
+ }
+
+  }
+
 
 .contact__item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  // align-items: center;
+  // justify-content: center;
 }
 
 .contact__link {
   display: flex;
-  align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  // align-items: center;
+  // padding-top: 5px;
+  // padding-bottom: 5px;
   color: $text-color;
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  // text-decoration: none;
+  // font-style: normal;
+ 
 
-  transition-property: color;
-  transition-duration: $time-hover;
-  transition-timing-function: $time-function;
+  // transition-property: color;
+  // transition-duration: $time-hover;
+  // transition-timing-function: $time-function;
 
   &:hover,
   &:focus,
@@ -37,13 +53,58 @@
   }
 }
 
+.header-link-tel{
+  font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+
+    @media screen and (min-width:$tablet){
+font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: $text-color;
+    }
+}
+
+.header-link-mail{
+font-weight: 500;
+font-size: 24px;
+line-height: 1.17;
+letter-spacing: 0.02em;
+
+@media screen and (min-width:$tablet){
+font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+}
+}
+
 .contact__icon {
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
+  display: none;
+  width: 14px;
+  height: 10px;
+  margin-right: 8px;
   fill: rgba(117, 117, 117, 1);
 
   transition-property: fill;
   transition-duration: $time-hover;
   transition-timing-function: $time-function;
+
+  @media screen and (min-width:$tablet){
+   display: flex; 
+  }
+}
+
+.header-mail {
+  width: 14px;
+  height: 10px;
+}
+
+.header-tel {
+  width: 10px;
+  height: 14px;
 }

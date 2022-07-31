@@ -1,4 +1,6 @@
 .header {
+  position: relative;
+  text-align: center;
   background-color: $priority-bg-color;
   border-bottom: 1px solid #ececec;
 }
@@ -6,15 +8,50 @@
 .header__box {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
+
+  @media screen and (min-width: $desktop){
+   justify-content:space-between;
+  }
+  
 }
 
 .header__nav {
-  display: flex;
-  align-items: center;
+  display: block;
+  text-align: start;
+
+ @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: center;
+      }
+  // align-items: flex-start;
 }
 
+.menu-container {
+  position: relative;
+  background-color: $priority-bg-color;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  padding-right: 40px;
+  z-index: 8;
 
+  &.is-open {
+    display: block;
+  }
 
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 796px;
+  }
 
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    padding: 0;
+  }
+}
 

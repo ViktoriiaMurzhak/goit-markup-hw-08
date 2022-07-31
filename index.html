@@ -15,8 +15,17 @@
   <!-- Шапка сторінки з логотипом (верхній блок)-->
   <header class="header">
     <div class="container header__box">
-    <nav class="header__nav" >
-      <a class="logo header__logo" href="./index.html"><span class="logo__span">Web</span>Studio</a>
+    <a class="logo header__logo" href="./index.html"><span class="logo__span">Web</span>Studio</a>
+
+        <button data-menu-button class="menu-button" type="button" aria-expanded="false" aria-controls="header-menu">
+        <svg class="menu-button__icon" aria-label="Переключатель мобильного меню">
+          <use class="menu-open" href="./images/icons/symbol-defs.svg#icon-menu-button-open"></use>
+          <use class="menu-close" href="./images/icons/symbol-defs.svg#icon-menu-button-close"></use>
+        </svg>
+      </button>
+
+    <div data-menu class="menu-container" id="menu-container">
+    <nav class="header__nav">
       <!-- Навігація на інші сторінки -->
         <ul class="site-nav">
           <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="./index.html">Студия</a></li>
@@ -26,16 +35,24 @@
         </nav>
     <ul class="contact">
         <li class="contact__item">
-          <a class="contact__link" href="mailto:info@devstudio.com"><svg class="contact__icon">
+          <a class="contact__link header-link-mail" href="mailto:info@devstudio.com"><svg class="contact__icon header-mail">
             <use href="./images/icons/symbol-defs.svg#icon-envelope"></use>
           </svg>info@devstudio.com</a>
         </li>
         <li class="contact__item">
-          <a class="contact__link" href="tel:+380961111111"><svg class="contact__icon">
+          <a class="contact__link header-link-tel" href="tel:+380961111111"><svg class="contact__icon header-tel">
             <use href="./images/icons/symbol-defs.svg#icon-smartphone"></use>
           </svg>+38 096 111 11 11</a>
         </li>
     </ul>
+
+  <ul class="header-socials">
+    <li class="header-socials__item"><a class="header-socials__link"  href="">Instagram</a></li>
+    <li class="header-socials__item"><a class="header-socials__link"  href="">Twitter</a></li>
+    <li class="header-socials__item"><a class="header-socials__link"  href="">Facebook</a></li>
+    <li class="header-socials__item"><a class="header-socials__link"  href="">LinkedIn</a></li>
+  </ul>
+    </div> 
     </div>
   </header>
   
@@ -126,7 +143,7 @@
      
       <ul class="team-card list">
         <li class="team-card__item">
-          <img class="team-card__img" src="./images/img.jpg" alt="Игорь Демьяненко" width="270">
+          <img class="team-card__img" srcset="./images/adapt/team/img.jpg 1x, ./images/adapt/team/img@2x.jpg 2x" src="./images/adapt/team/img.jpg" alt="Игорь Демьяненко">
           <div class="team-card__box">
           <h3 class="team-card__title" >Игорь Демьяненко</h3>
           <p class="team-card__text">Product Designer</p>
@@ -163,7 +180,7 @@
         </div>
         </li>
         <li class="team-card__item">
-          <img class="team-card__img" src="./images/img(1).jpg" alt="Ольга Репина" width="270">
+          <img class="team-card__img" srcset="./images/adapt/team/img1.jpg 1x, ./images/adapt/team/img1@2x.jpg 2x" src="./images/adapt/team/img1.jpg" alt="Ольга Репина">
           <div class="team-card__box">
           <h3 class="team-card__title" >Ольга Репина</h3>
           <p class="team-card__text">Frontend Developer</p>
@@ -200,7 +217,7 @@
         </div>
         </li>
         <li class="team-card__item">
-          <img class="team-card__img" src="./images/img(2).jpg" alt="Николай Тарасов" width="270">
+          <img class="team-card__img" srcset="./images/adapt/team/img2.jpg 1x, ./images/adapt/team/img2@2x.jpg 2x" src="./images/adapt/team/img2.jpg" alt="Николай Тарасов">
           <div class="team-card__box">
           <h3 class="team-card__title">Николай Тарасов</h3>
           <p class="team-card__text">Marketing</p>
@@ -237,7 +254,7 @@
          </div>
         </li>
         <li class="team-card__item">
-          <img class="team-card__img" src="./images/img(3).jpg" alt="Михаил Ермаков" width="270">
+          <img class="team-card__img" srcset="./images/adapt/team/img3.jpg 1x, ./images/adapt/team/img3@2x.jpg 2x" src="./images/adapt/team/img3.jpg" alt="Михаил Ермаков">
           <div class="team-card__box">
           <h3 class="team-card__title">Михаил Ермаков</h3>
           <p class="team-card__text">UI Designer</p>
@@ -406,10 +423,10 @@
         <button data-modal-close type="button" class="modal__button"><svg class="modal__icon">
         <use href="./images/icons/symbol-defs.svg#icon-close"></use></svg></button>
       
-        <form class="modal__form" autocomplete="on">
-        <h2 class="modal__title">Оставьте свои данные, мы вам перезвоним</h2>
+        <form class="modal-form" autocomplete="on">
+        <h2 class="modal-form__title">Оставьте свои данные, мы вам перезвоним</h2>
 
-      <div class="modal-form">
+      <div class="modal-form__all">
          <label class="modal-form__label" for="modal-name">Имя</label>
       <div class="modal-form__box">
          <input class="modal-form__input" type="text" name="modal-name" id="modal-name">
@@ -419,7 +436,7 @@
       </div>
       </div>
       
-      <div class="modal-form">
+      <div class="modal-form__all">
        <label class="modal-form__label"  for="modal-tel">Телефон</label>
        <div class="modal-form__box">
         <input class="modal-form__input" type="tel" name="modal-tel" id="modal-tel">
@@ -428,7 +445,7 @@
          </svg></div>
       </div>
       
-      <div class="modal-form">
+      <div class="modal-form__all">
         <label class="modal-form__label"  for="modal-mail">Почта</label>
         <div class="modal-form__box">
         <input class="modal-form__input" type="mail" name="modal-mail" id="modal-mail">
@@ -436,7 +453,7 @@
         </svg></div>
       </div>
       
-      <div class="modal-form">
+      <div class="modal-form__all">
         <label class="modal-form__label"  for="modal-comment">Комментарий</label>
         <textarea class="modal-form__input comment" name="modal-comment" id="modal-comment" placeholder="Введите текст..."></textarea>
       </div>
@@ -456,6 +473,7 @@
       </div>
 
   <script src="./js/modal.js"></script>
+  <script src="./js/menu.js"></script>
 </body>
 </html>
 

@@ -1,7 +1,28 @@
 .clients__list {
   @extend %list;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
+
+
+  @media screen and (min-width: $desktop) {
+    justify-content: center;
+  }
 }
 
+.clients__item {
+  width: 100%;
+
+  @media screen and (max-width: 767px) {
+      width: calc((100% - 30px) / 2) ;
+    }
+
+  @media screen and (min-width: $tablet) {
+    width: 226px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 170px;
+  }
+}

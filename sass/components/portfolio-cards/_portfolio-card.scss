@@ -7,9 +7,7 @@ min-height: 404px;
 
 @media screen and (min-width:$tablet){
   width: 354px; ;
-  
 }
-
 
 @media screen and (min-width:$desktop) {
   flex-direction: row;
@@ -21,16 +19,40 @@ min-height: 404px;
   transition-duration: $time-hover;
   transition-timing-function: $time-function;
 
-&:hover {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      1px 4px 6px rgba(0, 0, 0, 0.16);
-    cursor: pointer;
-  }
+}
 
-  &:hover .portfolio-card__overlay,
-  &:focus .portfolio-card__overlay {
-    transform: translateY(0);
-  }
+.portfolio-card__link{
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+  width: 450px;
+  min-height: 404px;
+
+  @media screen and (min-width:$tablet) {
+      width: 354px;
+      ;
+    }
+  
+    @media screen and (min-width:$desktop) {
+      flex-direction: row;
+      width: 370px;
+      margin-bottom: 0;
+    }
+  
+    transition-property: box-shadow;
+    transition-duration: $time-hover;
+    transition-timing-function: $time-function;
+
+        &:hover {
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+          cursor: pointer;
+        }
+    
+        &:hover .portfolio-card__overlay,
+        &:focus .portfolio-card__overlay {
+          transform: translateY(0);
+        }
 
 }
 
@@ -91,6 +113,7 @@ min-height: 404px;
 }
 
 .portfolio-card__box {
+  flex-grow: 1;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
@@ -102,17 +125,19 @@ min-height: 404px;
 
 }
 
-.first-card-box{
+.first-card-box {
   padding-bottom: 20px;
 
-  @media screen and(min-width:$tablet) {
-      padding-bottom: 56px;
-    }
+  @media screen and (min-width:$tablet){
+    padding-bottom: 56px;
+  }
 
-     @media screen and(min-width:$desktop) {
-       padding-bottom: 20px;
-     }
+    @media screen and (min-width:$desktop) {
+      padding-bottom: 20px;
+    }
 }
+
+
 
 
 

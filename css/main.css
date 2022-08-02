@@ -956,6 +956,13 @@ img {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .feature__item {
+    max-width: 270px;
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .feature__item:not(:last-child) {
     margin-bottom: 30px;
